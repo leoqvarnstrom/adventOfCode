@@ -4,4 +4,10 @@ const readInput = (input) => {
   return fs.readFileSync(input, 'utf-8');
 }
 
-module.exports = { readInput }
+const arrayDeleteIndex = (arr, idx) => {
+  const copyArr = JSON.parse(JSON.stringify(arr));
+  copyArr.splice(idx, 1);
+  return copyArr;
+}
+
+module.exports = { readInput, arrayDeleteIndex }
